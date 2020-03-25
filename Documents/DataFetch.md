@@ -207,8 +207,24 @@ data=QA.QAFetch.QATdx.QA_fetch_get_stock_transaction_realtime('000001')
 QA.QA_util_log_info('板块数据')
 data=QA.QAFetch.QATdx.QA_fetch_get_stock_block()
 ```
+### 1.15. 债券列表 | BOND_CN/LIST
+```python
+QA.QA_fetch_get_bond_list(数据库:tdx / pytdx)
+data=QA.QA_fetch_get_bond_list('tdx')
+```
+### 1.16. 债券日线 | BOND_CN/DAY
+```python
+QA_fetch_get_bond_day(数据库, 债券代码, 开始日期, 结束日期)
+data=QA_fetch_get_bond_day('tdx','128070','2020-03-10','2020-03-25')
+```
+### 1.17. 债券分钟线 | BOND_CN/MIN
+```python
+QA_fetch_get_bond_min(数据库, 债券代码, 开始日期, 结束日期,频率)
+data=QA.QA_fetch_get_bond_min('tdx', '128070', '2020-03-10','2020-03-25',level='1min') # level 可选 1min,5min,15min,30min,60min
+```
 
-
+ 债券日线 | BOND_CN/DAY]
+        - [1.17  债券分钟线 | BOND_CN/MIN]
 
 ##  2. 从数据库获取 | FROM LOCALHOST
 
